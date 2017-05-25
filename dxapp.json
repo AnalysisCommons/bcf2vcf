@@ -1,0 +1,36 @@
+{
+  "name": "bcf2vcf",
+  "title": "BCF to VCF converter",
+  "summary": "Converts bcf to vcf files ",
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "bcf",
+      "class": "file",
+      "optional": false
+    },
+    {
+      "name": "outfile",
+      "label": "Prefix for output ( include the chr #, if needed , do not include .bcf)",
+      "class": "string",
+      "optional": false
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "vcf",
+      "class": "file"
+    }
+  ],
+  "runSpec": {
+    "file": "src/code.sh",
+    "interpreter": "bash"
+  },
+  "access": {
+    "project": "CONTRIBUTE",
+    "allProjects": "CONTRIBUTE",
+    "network": [
+      "*"
+    ]
+  }
+}
